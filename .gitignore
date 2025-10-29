@@ -1,0 +1,4 @@
+.env
+.gitigore
+env_var
+__pycache__
