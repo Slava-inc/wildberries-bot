@@ -1,8 +1,8 @@
 from aiogram import Router, F
 from aiogram.types import Message
 from aiogram.fsm.context import FSMContext
-from keyboards.main_menu import main_menu
-from states import SearchStates
+from bot.keyboards.main_menu import main_menu
+from bot.states import SearchStates
 from api.wildberries import get_product_info
 from db.models import User
 from db.session import async_session

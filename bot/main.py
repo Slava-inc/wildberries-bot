@@ -1,7 +1,7 @@
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.redis import RedisStorage
 from config import TELEGRAM_BOT_TOKEN, REDIS_URL
-from handlers import start, search
+from bot.handlers import start, search
 import asyncio
 
 async def main():

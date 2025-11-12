@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   bot:
     build: .
@@ -7,7 +5,7 @@ services:
       - DATABASE_URL=postgresql+asyncpg://user:password@db:5432/wildberries_bot
       - REDIS_URL=redis://redis:6379
       - WB_API_URL=http://mock:8000/api
-      - TELEGRAM_BOT_TOKEN=your_token_here
+      - TELEGRAM_BOT_TOKEN=7081696323:AAHMME68JTKvSFFDkzFDjIm1G0qBIxfpAQw
     depends_on:
       - db
       - redis
@@ -28,13 +26,14 @@ services:
 
   redis:
     image: redis:7-alpine
-
+    ports:
+      - "6379:6379"
   mock:
     build:
       context: .
       dockerfile: Dockerfile.mock
     ports:
-      - "8001:8000"
+      - "8002:8000"
 
 volumes:
   postgres_data:
